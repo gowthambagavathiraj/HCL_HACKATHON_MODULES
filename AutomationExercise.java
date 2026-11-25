@@ -14,7 +14,7 @@ public class AutomationExercise {
 		driver.manage().window().maximize();
 		driver.findElement(By.linkText("Signup / Login")).click();
 		driver.findElement(By.name("name")).sendKeys("Gowtham");
-		driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/input[3]")).sendKeys("gowthambagavathirajaa@gmail.com");
+		driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/input[3]")).sendKeys("privatecenter@gmail.com");
 		driver.findElement(By.xpath("//button[text()='Signup']")).click();
 		
 		WebElement rMr=driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div/div[1]/form/div[1]/div[1]/label"));
@@ -62,6 +62,10 @@ public class AutomationExercise {
 		
 		driver.findElement(By.linkText("Continue")).click();
 		driver.findElement(By.linkText("Logout")).click();
+		
+		driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[1]/div/form/input[2]")).sendKeys("privatecenter@gmail.com");
+		driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[1]/div/form/input[3]")).sendKeys("12345678");
+		driver.findElement(By.xpath("//button[text()='Login']")).click();
 		
 	}
 
