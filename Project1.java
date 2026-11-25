@@ -9,13 +9,13 @@ import org.openqa.selenium.support.ui.Select;
 
 public class Project1 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://www.automationexercise.com/");
 		driver.manage().window().maximize();
 		driver.findElement(By.linkText("Signup / Login")).click();
 		driver.findElement(By.name("name")).sendKeys("Gowtham");
-		driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/input[3]")).sendKeys("prprprivate@gmail.com");
+		driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/input[3]")).sendKeys("pprprivate@gmail.com");
 		driver.findElement(By.xpath("//button[text()='Signup']")).click();
 		
 		WebElement rMr=driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div/div[1]/form/div[1]/div[1]/label"));
@@ -62,26 +62,31 @@ public class Project1 {
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
 		
 		driver.findElement(By.linkText("Continue")).click();
+		Thread.sleep(3000);
 		driver.findElement(By.linkText("Logout")).click();
 		
-		driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[1]/div/form/input[2]")).sendKeys("prprprivate@gmail.com");
+		driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[1]/div/form/input[2]")).sendKeys("pprprivate@gmail.com");
 		driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[1]/div/form/input[3]")).sendKeys("12345678");
 		driver.findElement(By.xpath("//button[text()='Login']")).click();
 		
 		driver.findElement(By.linkText("View Product")).click();
-	
+		Thread.sleep(3000);
 		
 		Actions act=new Actions(driver);
 		act.scrollByAmount(0, 500).perform();
 		
 		driver.findElement(By.xpath("//input[@placeholder='Your Name']")).sendKeys("Gowtham B");
-		driver.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys("prprprivate@gmail.com");
+		driver.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys("pprprivate@gmail.com");
 		driver.findElement(By.id("review")).sendKeys("Improve the Product Quality and Reduce the Price");
+		Thread.sleep(3000);
 		driver.findElement(By.id("button-review")).click();
+		Thread.sleep(3000);
 		driver.navigate().back();
 		
 		driver.findElement(By.linkText("Delete Account")).click();
 		driver.findElement(By.linkText("Continue")).click();
+		
+		driver.quit();
 	}
 
 }
