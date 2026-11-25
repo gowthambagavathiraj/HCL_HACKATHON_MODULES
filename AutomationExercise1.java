@@ -4,9 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
-public class AutomationExercise1 {
+public class Project1 {
 
 	public static void main(String[] args) {
 		WebDriver driver=new ChromeDriver();
@@ -14,7 +15,7 @@ public class AutomationExercise1 {
 		driver.manage().window().maximize();
 		driver.findElement(By.linkText("Signup / Login")).click();
 		driver.findElement(By.name("name")).sendKeys("Gowtham");
-		driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/input[3]")).sendKeys("privatecenter@gmail.com");
+		driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/input[3]")).sendKeys("prprprivatec@gmail.com");
 		driver.findElement(By.xpath("//button[text()='Signup']")).click();
 		
 		WebElement rMr=driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div/div[1]/form/div[1]/div[1]/label"));
@@ -63,9 +64,21 @@ public class AutomationExercise1 {
 		driver.findElement(By.linkText("Continue")).click();
 		driver.findElement(By.linkText("Logout")).click();
 		
-		driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[1]/div/form/input[2]")).sendKeys("privatecenter@gmail.com");
+		driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[1]/div/form/input[2]")).sendKeys("prprprivatec@gmail.com");
 		driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[1]/div/form/input[3]")).sendKeys("12345678");
 		driver.findElement(By.xpath("//button[text()='Login']")).click();
+		
+		driver.findElement(By.linkText("View Product")).click();
+	
+		
+		Actions act=new Actions(driver);
+		act.scrollByAmount(0, 500).perform();
+		
+		driver.findElement(By.xpath("//input[@placeholder='Your Name']")).sendKeys("Gowtham B");
+		driver.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys("prprprivatec@gmail.com");
+		driver.findElement(By.id("review")).sendKeys("Improve the Product Quality and Reduce the Price");
+		driver.findElement(By.id("button-review")).click();
+		driver.navigate().back();
 		
 	}
 
