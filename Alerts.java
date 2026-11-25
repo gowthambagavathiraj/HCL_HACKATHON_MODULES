@@ -17,15 +17,40 @@ public class Alerts {
 
         System.out.println("Website opened: " + driver.getTitle());
 
+        // 1. JS Alert
         driver.findElement(By.xpath("//button[text()='Click for JS Alert']")).click();
 
-        System.out.println("Button clicked");
+        Alert simpleAlert = driver.switchTo().alert();
 
-        Alert alert = driver.switchTo().alert();
+        System.out.println("Alert message: " + simpleAlert.getText());
 
-        System.out.println("Alert message: " + alert.getText());
+        simpleAlert.accept();
 
-        alert.accept();
+        System.out.println("JS Alert accepted");
+
+        // 2. JS Confirm
+        driver.findElement(By.xpath("//button[text()='Click for JS Confirm']")).click();
+
+        Alert confirmAlert = driver.switchTo().alert();
+
+        System.out.println("Confirm message: " + confirmAlert.getText());
+
+        confirmAlert.dismiss(); // Click Cancel
+
+        System.out.println("JS Confirm dismissed");
+
+        // 3. JS Prompt
+        driver.findElement(By.xpath("//button[text()='Click for JS Prompt']")).click();
+
+        Alert promptAlert = driver.switchTo().alert();
+
+        System.out.println("Prompt message: " + promptAlert.getText());
+
+        promptAlert.sendKeys("Gowtham");
+
+        promptAlert.accept();
+
+        System.out.println("JS Prompt accepted");
 
         driver.quit();
     }
