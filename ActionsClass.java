@@ -28,6 +28,11 @@ public class ActionsClass {
 		//hold for particular seconds
 		WebElement hold=driver.findElement(By.id("interact-hold-btn"));
 		act.clickAndHold(hold).pause(Duration.ofSeconds(2)).release().perform();
+		//hover
+		WebElement mouse=driver.findElement(By.id("interact-mouse-target"));
+		act.moveToElement(mouse).perform();
+		//scroll
+		act.scrollByAmount(0, 500).perform();
 		}
 
 }
