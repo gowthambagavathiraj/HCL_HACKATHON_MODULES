@@ -14,6 +14,7 @@ public class ActionsClass {
 		WebDriver driver=new ChromeDriver();
 		
 		driver.get("https://testdojo.dev/elements/interactions?utm_source=chatgpt.com");
+		driver.manage().window().maximize();
 		//right click
 		WebElement rclick=driver.findElement(By.id("interact-rightclick-target"));
 		Actions act=new Actions(driver);
