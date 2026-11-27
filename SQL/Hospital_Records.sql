@@ -12,8 +12,8 @@ CREATE TABLE patients (
 
 
 
--- PROBLEM STATEMENT
--- A hospital wants to maintain basic patient information in its database. The system should store the patient ID, patient name, age, gender, and city.
+PROBLEM STATEMENT
+A hospital wants to maintain basic patient information in its database. The system should store the patient ID, patient name, age, gender, and city.
 
--- TASK
--- Write a SQL statement to create the patients table with the specified columns and datatypes.
+TASK
+Write a SQL statement to create the patients table with the specified columns and datatypes.
