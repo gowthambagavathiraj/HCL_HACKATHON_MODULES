@@ -2,8 +2,9 @@
 create table course(
   course_id int,
   course_name varchar(100),
-  durations_months int,
-  course_fee decimal(10,2)
+   course_fee decimal(10,2),
+  durations_months int
+ 
 );
 
 
@@ -18,3 +19,8 @@ INPUT FORMAT
 No console input.
 OUTPUT FORMAT
 The courses table must be created successfully.
+
+
+
+
+  
