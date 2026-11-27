@@ -9,12 +9,12 @@ create table course(
 
 
 
--- PROBLEM STATEMENT
--- A college wants to maintain a database for storing the details of courses offered to students. Each course has a course ID, course name, duration in months, and course fee.
+PROBLEM STATEMENT
+A college wants to maintain a database for storing the details of courses offered to students. Each course has a course ID, course name, duration in months, and course fee.
 
--- TASK
--- Write a SQL statement to create the courses table with the specified columns and datatypes.
--- INPUT FORMAT
--- No console input.
--- OUTPUT FORMAT
--- The courses table must be created successfully.
+TASK
+Write a SQL statement to create the courses table with the specified columns and datatypes.
+INPUT FORMAT
+No console input.
+OUTPUT FORMAT
+The courses table must be created successfully.
